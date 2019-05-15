@@ -206,7 +206,5 @@ print('\nFound', len(rectList), ' rectangular islands' )
 print(rects)
 prettyInput(input)
 prettyInput(paddedInput)
-#To do
-# Optimization *
-# * If currRow, currCol already within an identified island, should move out of that
-# * one way to do that is to convert all 0's in verified rectangles to something else, so the search won't explore those. 
+
+
