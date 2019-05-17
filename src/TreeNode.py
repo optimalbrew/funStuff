@@ -1,5 +1,5 @@
 """
-Preorder, inorder and postorder binary tree traversl using recursion:
+Preorder, inorder and postorder binary tree traversals using recursion:
 """
 
 class TreeNode:
