@@ -42,7 +42,7 @@ def printList(l):
     print(str1)
 
 #adding values stored in lists
-#carry is here to avoid situations like 7->0->10->2->1.
+#carry is here to avoid situations like 7->0->10->2->1. (e.g. previous version had carry initialized to 0 inside func)
 def addList(l1,l2,carry=0): 
     if l1.val != None and l2.val != None:
         sum = carry + l1.val + l2.val
