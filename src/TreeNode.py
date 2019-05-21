@@ -54,7 +54,6 @@ def inorderTrav(root):
     root = prev.pop()
     
 
-
 # preorder traversal of the tree
 def preorderTrav(root):
     nodes = [] #to keep track of traversed nodes

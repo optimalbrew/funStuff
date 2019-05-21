@@ -1,7 +1,14 @@
 """
 Dijkstra's shortest path using a priority queue (instead of original 'wavefront')
+Implementation Notes: 
+Need to start with three data structures:
+
+distMap = {} #from source
+Q = heap (or other priority queue implementation)
+prev =[]  //this is easy to forget
 
 Pseudocode from wikipedia: https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+
 
 1  function Dijkstra(Graph, source):
 2      dist[source] ← 0                           // Initialization
@@ -80,8 +87,8 @@ def nodeDist(node1,node2):
 
 ############## Main algorithm #################
 # initialization
-allNodes = set([n1,n2,n3,n4,n5,n6])
-nodeDict = {node.label: node for node in allNodes} #can use label (string) to refer to node object instance 
+graph = set([n1,n2,n3,n4,n5,n6]) #this describes the graph
+nodeDict = {node.label: node for node in graph} #can use nodel label (string) to refer to node object instance 
 
 source = n1 #start node
 distance = {'n1':0}
@@ -92,7 +99,7 @@ Q = [] #this will be used for the priority queue
 prev={} #map of previous node to retrace path
 
 # Initialize distance to all nodes from source as infty
-for node in allNodes:
+for node in graph:
     if node != source:
         distance[node.label] = inf
     prev[node.label] = None 

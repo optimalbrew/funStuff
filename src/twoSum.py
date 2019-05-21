@@ -1,5 +1,6 @@
 """
 Find indices of pairs of elements in a list that sum to a given target
+See also twoDiff.py
 """
 
 def twoSum(nums, target):
