@@ -46,6 +46,7 @@ def fillCell(input,r,c):
         fill = input[r+1][c]
     return fill
 
+#actually returns the entire 2d array (not just the top left cell which contains the number of paths)
 def numpaths(input):
     output = input    
     n = len(input)
