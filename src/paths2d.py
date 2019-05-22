@@ -71,5 +71,7 @@ def numpaths(input):
 
 paths = numpaths(input)
 
+print('\nNumber of paths is '+ str(paths[0][0])+'\n')
+
 for i in range(len(paths)):
     print(paths[i])
