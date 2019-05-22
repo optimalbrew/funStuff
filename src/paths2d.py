@@ -31,11 +31,9 @@ input = [
         ]
 
 #logic to fill a cell using corner neighbors (only if cell is not blocked)
-def fillCell(input,r,c):
+def fillCell(input,r,c,n,m):
     if input[r][c] == 1: # the cell is blocked
         return 0
-    n = len(input)
-    m = len(input[0])
     if r<n-1 and c<m-1: #interior
         fill = input[r][c+1] + input[r+1][c]
     if r == n-1 and c == m-1: #bottom right corner ("starting" point for backward induction)
@@ -65,7 +63,7 @@ def numpaths(input):
     while r >= 0: #for each row, starting from bottom
         c = m-1 #start from right column
         while c >= 0:
-            output[r][c] = fillCell(input,r,c)
+            output[r][c] = fillCell(input,r,c,n,m)
             c -= 1
         r -= 1
     return output
