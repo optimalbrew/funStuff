@@ -1,12 +1,18 @@
 """
-Read the elements of a 2D matrix as a 'spiral'
+Read the elements of a 2D matrix as a 'spiral' (clockwise)
 
 Idea: 
 * recursion based on reading the edges of a rectangle
 * 4 segments to read (if n,m>1)
 * if either of row or col = 1, just read that segment.
 """
-n,m = 3,3
+n,m = 5,5 #default
+# print('\nEnter num rows')
+# n = int(input())
+# print('\nEnter num cols')
+# m = int(input())
+
+#create an input matrix
 data = []
 c = 0
 for r in range(n):
@@ -35,7 +41,7 @@ def readSpiral(r,c,n,m):
         n -= 2
         m -= 2
         readSpiral(r,c,n,m)
-    elif n == 1 and m >= 1: #read right
+    elif n == 1 and m >= 1: #read right # includes case with just 1 element
         for i in range(c,c+(m-1)+1): #read right ALL
             l.append(data[r][i])
     elif n > 1 and m == 1: #read down
@@ -48,4 +54,5 @@ readSpiral(r,c,n,m)
 for d in data:
     print(d)
 
+print('\n')
 print(l)

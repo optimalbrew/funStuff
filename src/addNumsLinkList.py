@@ -1,11 +1,14 @@
 """
-Add tow numbers (ints) when each is stored in a linked list with each digit in a node and in reverse order, so the unit's place is at the head of the list.
+Add two numbers (ints) when each is stored in a linked list with each digit in a node and in reverse order, 
+so the unit's place is at the head of the list.
 So given input l1 and l2 where each is a head node, output a result that is also the head of a linked list.
+
 Example:
     342
    +265
    ----
     607 
+
 Given input: 'l1' and 'l2' where l1 is head node of a list storing values 2->4->-3 and similarly l2 is head of a list that stores 5->6->2,
 the output should be the head l3 of a list with values 7->0->6   
 
