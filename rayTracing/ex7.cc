@@ -49,11 +49,14 @@ int main() {
     
     camera cam; // NEW (had fixed origin previously)
     
-    hittable *list[2]; // pointer to array (of size 2) of hittable objects 
+    hittable *list[4]; // pointer to array (of size 2) of hittable objects 
     list[0] = new sphere(vec3(0,0,-1), 0.5);
-    list[1] = new sphere(vec3(0,-100.5,-1), 100); //world surface? LARGE radius, slight 0.5 center offset from radius
+    list[1] = new sphere(vec3(0,-100.5,-1), -100); //world surface? LARGE radius, slight 0.5 center offset from radius
+    list[2] = new sphere(vec3(.5,.25,-1), 0.25);
+    list[3] = new sphere(vec3(-.5,-.25,-1), 0.25);
 
-    hittable *world = new hittable_list(list, 2);
+    //the list of objects and how many to show
+    hittable *world = new hittable_list(list, 4);
 
     //then the pixel values 
     for (int j = ny-1; j >= 0; j--) {
